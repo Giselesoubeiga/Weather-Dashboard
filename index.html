@@ -15,10 +15,10 @@
       </div>
       <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h4>Search for a city</h4>
                 <input class="form-control" type="text"/>
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="">
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">Austin</li>
                       <li class="list-group-item">Chicago</li>
@@ -32,14 +32,16 @@
                   </div>
             </div>
             
-            <div class="col md-8">
+            <div class="col-md-9">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title" id="cityName"></h5>
+                        <img src="" id="icon-w" alt="">
                         <p class="card-text">
-                            <h4>Humidity: <span id="humiditySet">41%</span></h4>
-                            <h4>Wind Speed: <span id="windSet">4,7 MPH</span></h4>
-                            <h4>UV Index: <span id="uvSet" class="badge badge-danger">9.49</span></h4>
+                            <h4>Temperature: <span id="temperatureSet"></span></h4>
+                            <h4>Humidity: <span id="humiditySet"></span></h4>
+                            <h4>Wind Speed: <span id="windSet"></span></h4>
+                            <h4>UV Index: <span id="uvSet" class="badge badge-danger"></span></h4>
                         </p>
                     </div>
             </div>
@@ -48,44 +50,15 @@
                     <h3>5:Day Forcast:</h3>
                     
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="bg-primary p-2 mt-4">
-                        <h5>01/16/2020</h5>
-                        <p>Temperature</p>
-                        <P>Humidity</P>
-                    </div>
-                </div>
-                <div class="col">
-                     <div class="bg-primary p-2 mt-4 ">
-                        <h5>01/16/2020</h5>
-                        <p>Temperature</p>
-                        <P>Humidity</P>
-                    </div>
-                </div>
-                <div class="col">
-                     <div class="bg-primary p-2 mt-4">
-                        <h5>01/16/2020</h5>
-                        <p>Temperature</p>
-                        <P>Humidity</P>
-                    </div>
-                </div>
-                <div class="col">
-                     <div class="bg-primary p-2 mt-4">
-                        <h5>01/16/2020</h5>
-                        <p>Temperature</p>
-                        <P>Humidity</P>
-                    </div>
-                </div>
-                <div class="col">
-                     <div class="bg-primary p-2 mt-4">
-                        <h5>01/16/2020</h5>
-                        <p>Temperature</p>
-                        <P>Humidity</P>
+                <div class="col-lg-12">
+                    <div class="row" id="fivecitys">
+
+               
+                
                     </div>
                 </div>
             </div>
+            
             
         </div>
 
