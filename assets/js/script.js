@@ -2,8 +2,7 @@
 $(document).ready(function(){
 
     //call difault city where the page is disply 
-    DifaultCity()
-
+    DifaultCity();
 
     function DifaultCity(){
         var url = "https://api.openweathermap.org/data/2.5/weather?q=Atlanta&APPID=0946b5eb988b3caf2e24954f8caf2636"
@@ -56,7 +55,7 @@ $(document).ready(function(){
 
 
        function FivedaysApiCall(city) {
-        //API CALL
+        //API CALL 
         var ApiUrl =
           "http://api.openweathermap.org/data/2.5/forecast?q=" +
           city +
@@ -130,7 +129,7 @@ $(document).ready(function(){
         });
       }
     
-
+//onc click submit=> event listneron search button
 
    
         
