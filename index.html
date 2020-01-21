@@ -12,7 +12,7 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <div class="jumbotron text-white bg-dark ">
+    <div class="jumbotron text-white bg-primary ">
         <h1 class="display-4 text-center ">Weather Dashboard</h1>
       </div>
       <div class="container">
@@ -28,15 +28,7 @@
                 </form>
                 <br>
                 <div class="card" style="">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Austin</li>
-                      <li class="list-group-item">Chicago</li>
-                      <li class="list-group-item">New York</li>
-                      <li class="list-group-item">Orlando</li>
-                      <li class="list-group-item">San FranCisco</li>
-                      <li class="list-group-item">Seattle</li>
-                      <li class="list-group-item">Denver</li>
-                      <li class="list-group-item">Atlanta</li>
+                    <ul class="list-group list-group-flush"  id="search-history">
                     </ul>
                   </div>
             </div>
@@ -44,13 +36,20 @@
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" id="cityName"></h5>
-                        <img src="" id="icon-w" alt="">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h6 class="card-title inline-block" id="cityName" ></h6>
+                       
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="" id="icon-w" style="margin-top: -15px;">
+                            </div>
+                        </div>
                         <p class="card-text">
-                            <h4>Temperature: <span id="temperatureSet"></span></h4>
-                            <h4>Humidity: <span id="humiditySet"></span></h4>
-                            <h4>Wind Speed: <span id="windSet"></span></h4>
-                            <h4>UV Index: <span id="uvSet" class="badge badge-danger"></span></h4>
+                            <h6>Temperature: <span id="temperatureSet"></span></h6>
+                            <h6>Humidity: <span id="humiditySet"></span></h6>
+                            <h6>Wind Speed: <span id="windSet"></span></h6>
+                            <h6>UV Index: <span id="uvSet" class="badge badge-danger"></span></h6>
                         </p>
                     </div>
             </div>
@@ -60,7 +59,7 @@
                     
                 </div>
                 <div class="col-lg-12">
-                    <div class="row" id="fivecitys">
+                    <div class="row" id="forecast">
 
                
                 

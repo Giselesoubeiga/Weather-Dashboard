@@ -1,6 +1,12 @@
 
 $(document).ready(function(){
 
+  /////
+// ON LOAD
+/////
+
+DisplaySearchHistory()
+
     //call difault city where the page is disply 
     DifaultCity();
 
@@ -35,22 +41,59 @@ $(document).ready(function(){
        // Display  wind 
        $('#windSet').text(data.wind.speed)
 
-// 2nd ajax call to get the uv index
-    // http://api.openweathermap.org/data/2.5/uvi/forecast?appid=0946b5eb988b3caf2e24954f8caf2636&lat={lat}&lon={lon}&cnt={cnt}
-    var lat = data.coord.lat;
-    var lon = data.coord.lon;
-    $.ajax({
-      method: "GET",
-      url:
-        "http://api.openweathermap.org/data/2.5/uvi/forecast?appid=0946b5eb988b3caf2e24954f8caf2636&lat=" +
-        lat +
-        "&lon=" +
-        lon
-    }).then(function(uvdata) {
-      console.log(uvdata);
-      $("#uvSet").text(uvdata[0].value);
-    });
+        // 2nd ajax call to get the uv index
+            // http://api.openweathermap.org/data/2.5/uvi/forecast?appid=0946b5eb988b3caf2e24954f8caf2636&lat={lat}&lon={lon}&cnt={cnt}
+            var lat = data.coord.lat;
+            var lon = data.coord.lon;
+            $.ajax({
+              method: "GET",
+              url:
+                "http://api.openweathermap.org/data/2.5/uvi/forecast?appid=0946b5eb988b3caf2e24954f8caf2636&lat=" +
+                lat +
+                "&lon=" +
+                lon
+            }).then(function(uvdata) {
+              console.log(uvdata);
+              $("#uvSet").text(uvdata[0].value);
+            });
        }
+
+       // on click on submit=> event listener on search button
+       $("#search-button").click(function(event){
+         event.preventDefault()
+
+          //check if value is valid => size !=0
+          const city = $("#search-input")
+          .val()
+          .trim();
+         console.log(city)
+
+// do the api call using ajax
+    // api call: GET POST PUT DELETE
+         var ApiUrl ="http://api.openweathermap.org/data/2.5/weather?q=" + city +"&APPID=0946b5eb988b3caf2e24954f8caf2636";
+       
+         $.ajax({
+          method: "GET",
+          url: ApiUrl
+        }).then(function(response) {
+          //save data in the local storage
+          localStorage.setItem(city, JSON.stringify(response));
+    
+          // add city in the search list
+          var li = $(
+            `<button type='button' class='list-group-item list-group-item-action' id='${city}'>${city}</li>`
+          );
+          // append the list item to the list by uding the id search-history
+          li.appendTo("#search-history");
+    
+          //console.log(response);
+          DiplayDataOnPage(response);
+    
+          //API CALL TO GET WEATHER DATA FOR 5 DAYS
+          FivedaysApiCall(city);
+        });
+   
+       })
 
 
 
@@ -86,11 +129,11 @@ $(document).ready(function(){
               var card;
               if (index === forecastArray.length - 1) {
                 card = $(
-                  "<div class='card bg-primary text-white small col' style=''>"
+                  "<div class='card bg-primary text-whit  col col-md-3 col-lg-2 col-sm-3 col-xs-12' style=''>"
                 );
               } else {
                 card = $(
-                  "<div class='card mr-3 bg-primary text-white small col' style=''>"
+                  "<div class='card mr-3 bg-primary text-white col col-md-3 col-lg-2 col-sm-3 col-xs-12' style=''>"
                 );
               }
               const cardBody = $("<div class='card-body my-1'>");
@@ -123,7 +166,7 @@ $(document).ready(function(){
               cardBody.appendTo(card);
     
               //append the card to the row forecast
-              $("#fivecitys").append(card);
+              $("#forecast").append(card);
             }
           });
         });
@@ -132,5 +175,17 @@ $(document).ready(function(){
 //onc click submit=> event listneron search button
 
    
+function DisplaySearchHistory() {
+  var cities = Object.keys(localStorage);
+  console.log(cities);
+  cities.forEach(function(city) {
+    var li = $(
+      `<button type='button' class='list-group-item list-group-item-action' id='${city}'>${city}</li>`
+    );
+    // append the list item to the list by uding the id search-history
+    li.appendTo("#search-history");
+  });
+}
+ 
         
 })
