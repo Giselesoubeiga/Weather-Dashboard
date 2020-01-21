@@ -24,7 +24,7 @@ DisplaySearchHistory()
        function DiplayDataOnPage(data){
 
         var icon = data.weather[0].icon;
-        var iconUrl = "http://openweathermap.org/img/wn/" + icon + ".png";
+        var iconUrl = "https://openweathermap.org/img/wn/" + icon + ".png";
         $('#icon-w').attr('src',iconUrl)
       
         var currentDate = new Date(data.dt * 1000).toISOString(); //https://stackoverflow.com/questions/56070796/show-day-name-instead-of-number-from-open-weather-api-response
@@ -48,7 +48,7 @@ DisplaySearchHistory()
             $.ajax({
               method: "GET",
               url:
-                "http://api.openweathermap.org/data/2.5/uvi/forecast?appid=0946b5eb988b3caf2e24954f8caf2636&lat=" +
+                "https://api.openweathermap.org/data/2.5/uvi/forecast?appid=0946b5eb988b3caf2e24954f8caf2636&lat=" +
                 lat +
                 "&lon=" +
                 lon
@@ -70,7 +70,7 @@ DisplaySearchHistory()
 
 // do the api call using ajax
     // api call: GET POST PUT DELETE
-         var ApiUrl ="http://api.openweathermap.org/data/2.5/weather?q=" + city +"&APPID=0946b5eb988b3caf2e24954f8caf2636";
+         var ApiUrl ="https://api.openweathermap.org/data/2.5/weather?q=" + city +"&APPID=0946b5eb988b3caf2e24954f8caf2636";
        
          $.ajax({
           method: "GET",
@@ -100,7 +100,7 @@ DisplaySearchHistory()
        function FivedaysApiCall(city) {
         //API CALL 
         var ApiUrl =
-          "http://api.openweathermap.org/data/2.5/forecast?q=" +
+          "https://api.openweathermap.org/data/2.5/forecast?q=" +
           city +
           "&APPID=0946b5eb988b3caf2e24954f8caf2636";
         $.ajax({
@@ -142,7 +142,7 @@ DisplaySearchHistory()
                 .appendTo(cardBody);
     
               var imgUrl =
-                "http://openweathermap.org/img/wn/" +
+                "https://openweathermap.org/img/wn/" +
                 forecast.weather[0].icon +
                 ".png";
               const img = $("<img>")
