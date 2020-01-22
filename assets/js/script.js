@@ -129,11 +129,11 @@ DisplaySearchHistory()
               var card;
               if (index === forecastArray.length - 1) {
                 card = $(
-                  "<div class='card bg-primary text-whit  col col-md-3 col-lg-2 col-sm-3 col-xs-12' style=''>"
+                  "<div class='card bg-primary text-white  col col-md-3 col-lg-2 col-sm-3 col-xs-12' style=''>"
                 );
               } else {
                 card = $(
-                  "<div class='card mr-3 bg-primary text-white col col-md-3 col-lg-2 col-sm-3 col-xs-12' style=''>"
+                  "<div class='card mr-4 mr-2 bg-primary text-white col col-md-3 col-lg-2 col-sm-3 col-xs-12' style=''>"
                 );
               }
               const cardBody = $("<div class='card-body my-1'>");

@@ -1,6 +1,8 @@
 
 <h1>Weather-Dashboard</h1>
 
+Please visit the deployed project at:
+
  <h2>Description</h2>
 
 This weather dashboard application has search functionality to find current weather conditions and future weather outlook for multiple cities.
