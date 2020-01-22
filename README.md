@@ -1,7 +1,7 @@
 
 <h1>Weather-Dashboard</h1>
 
-Please visit the deployed project at:
+Please visit the deployed project at:https://giselesoubeiga.github.io/weather-dashboard/
 
  <h2>Description</h2>
 
