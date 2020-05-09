@@ -1,7 +1,7 @@
 
 <h1>Weather-Dashboard</h1>
 
-Please visit the deployed project at:
+Please visit the deployed project at:https://giselesoubeiga.github.io/weather-dashboard/
 
  <h2>Description</h2>
 
@@ -16,6 +16,7 @@ It also inncludes a search history so that users can access their past search te
 finally, this app includes a 5-Day Forecast below the current weather conditions.
 
 Each day for the 5-Day Forecast displays the following: -Date -Icon image (visual representation of weather conditions) -Temperature -Humidity
+<<<<<<< HEAD
 
 # Demo
 
