@@ -16,3 +16,7 @@ It also inncludes a search history so that users can access their past search te
 finally, this app includes a 5-Day Forecast below the current weather conditions.
 
 Each day for the 5-Day Forecast displays the following: -Date -Icon image (visual representation of weather conditions) -Temperature -Humidity
+
+# Demo
+
+![alt text](assets/img/Demo.PNG)

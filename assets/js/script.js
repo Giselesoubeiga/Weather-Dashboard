@@ -67,8 +67,7 @@ DisplaySearchHistory()
           .val()
           .trim();
          console.log(city)
-
-// do the api call using ajax
+         
     // api call: GET POST PUT DELETE
          var ApiUrl ="https://api.openweathermap.org/data/2.5/weather?q=" + city +"&APPID=0946b5eb988b3caf2e24954f8caf2636";
        
